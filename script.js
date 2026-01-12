@@ -33,8 +33,26 @@ const advanceBrown = (e) => {
 
 
 // Check for a winner
-const checkWinner = (position, color) => {
-  
+  const checkWinner1 = (position, color) => {
+  position = blue_position;
+  color = "blue";
+ if (position > 4){
+  winner.textContent = `the ${color} horse won!`;
+ }
+}
+const checkWinner2 = (position, color) => {
+  position = pink_position;
+  color = "pink";
+ if (position > 4){
+  winner.textContent = `the ${color} horse won!`;
+ }
+}
+const checkWinner3 = (position, color) => {
+  position = brown_position;
+  color = "brown";
+ if (position > 4){
+  winner.textContent = `the ${color} horse won!`;
+ }
 };
 
 
@@ -43,3 +61,6 @@ const checkWinner = (position, color) => {
 blueButton.addEventListener("click", advanceBlue);
 pinkButton.addEventListener("click", advancePink);
 brownButton.addEventListener("click", advanceBrown);
+blueButton.addEventListener("click", checkWinner1);
+pinkButton.addEventListener("click", checkWinner2);
+brownButton.addEventListener("click", checkWinner3);
